@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rompecabezas y Cuestionario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Arma el rompecabezas para continuar</h1>
+
+    <div class="puzzle-container">
+        <div id="board"></div>
+        <div id="pieces"></div>
+    </div>
+
+    <button id="checkPuzzleBtn" onclick="checkPuzzle()">Verificar</button>
+    <p id="message"></p>
+
+    <div id="completedPuzzle" class="hidden">
+        <h2>¡Bien hecho! Ahora responde el cuestionario:</h2>
+        <form id="quizForm">
+            <p>1. ¿Cuál es mi pasatiempo favorito?</p>
+            <label><input type="radio" name="q1" value="correct"> Chismear</label>
+            <label><input type="radio" name="q1" value="wrong"> Editar videos</label>
+            <label><input type="radio" name="q1" value="wrong"> Programar</label>
+
+            <p>2. ¿Que estoy estudiando actualmente?</p>
+            <label><input type="radio" name="q2" value="wrong"> Ingenieria en Programacion</label>
+            <label><input type="radio" name="q2" value="correct"> Ingenieria en computacion</label>
+            <label><input type="radio" name="q2" value="wrong"> Ingenieria en Inteligencia Artificial</label>
+
+            <p>3. ¿Quien me traumo tanto?</p>
+            <label><input type="radio" name="q3" value="correct"> Todas son correctas</label>
+            <label><input type="radio" name="q3" value="wrong"> Abi As</label>
+            <label><input type="radio" name="q3" value="wrong"> Brandon</label>
+            <label><input type="radio" name="q3" value="wrong"> Yanko</label>
+
+            <p>4. ¿Quien es la mejor amiga del mundo?</p>
+            <label><input type="radio" name="q4" value="correct"> Yo</label>
+            <label><input type="radio" name="q4" value="correct"> Karina</label>
+            <label><input type="radio" name="q4" value="correct"> Brenda</label>
+
+            <button type="button" onclick="checkQuiz()">Enviar respuestas</button>
+        </form>
+        <p id="quizMessage"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
